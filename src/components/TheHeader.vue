@@ -25,10 +25,7 @@ export default {
 
                 <!-- logo e titolo -->
                 <div class="d-flex align-items-center">
-                    <a href="#0"><img src="../assets/imgs/logo-fitnes.png" alt="logo img"></a>
-                    <a href="#0">
-                        <h3 class="m-0">Avada Fitnes</h3>
-                    </a>
+                    <a href="#0"><img src="../assets/imgs/logo.png" alt="logo img"></a>
                 </div>
 
 
@@ -80,7 +77,7 @@ export default {
 
 .container-fluid {
     color: $my-white-color;
-    background-color: $my-balck-color;
+    background-color: $my-black-color;
 
     .container {
         height: 100px;
@@ -89,7 +86,6 @@ export default {
             color: $my-white-color;
             text-decoration: none;
             padding: 40px 5px;
-            font-weight: bold;
         }
 
         .navbar-container {
@@ -131,7 +127,6 @@ export default {
                         .dropa {
                             height: 100px;
                             padding: 40px 10px;
-                            font-size: 16px;
                             border: none;
 
                             .badge {
@@ -145,10 +140,10 @@ export default {
                             transition: opacity 0.3s ease-in-out;
                             position: absolute;
                             top: 62px;
-                            background-color: $my-balck-color;
+                            background-color: $my-black-color;
                             min-width: 150px;
                             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                            z-index: 1;
+                            z-index: 4;
                             border-radius: 0 0 5px 5px;
 
                             a {
@@ -175,8 +170,7 @@ export default {
 
             .my-btn {
                 background-color: $my-blu-color;
-                font-size: .9rem;
-                font-weight: bold;
+                font-size: .8rem;
 
                 &:hover {
                     transition: 0.5s;
