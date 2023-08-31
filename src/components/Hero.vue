@@ -32,7 +32,8 @@ export default {
 
 .container-fluid {
     background-image: url(../assets/imgs/slider82x-scaled.jpg);
-    background-size: 2000px;
+    background-size: 1950px;
+    background-position: top right;
     background-repeat: no-repeat;
     height: 700px;
     z-index: 1;
@@ -112,12 +113,12 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: end;
+            align-items: center;
             width: 30%;
             .btn-play {
                 border: 0;
                 color: $my-blu-color;
-                padding: 30px 35px;
+                padding: 35px 40px;
                 background-color: $my-white-color;
                 font-size: 1.1rem;
 

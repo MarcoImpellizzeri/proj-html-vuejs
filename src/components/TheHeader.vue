@@ -151,7 +151,7 @@ export default {
                                 padding: 12px 16px;
                                 text-decoration: none;
                                 display: block;
-                                font-size: .7rem;
+                                font-size: .8rem;
 
                                 &:last-child {
                                     border-radius: 0 0 5px 5px;
