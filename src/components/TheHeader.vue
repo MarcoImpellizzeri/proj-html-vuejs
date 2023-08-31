@@ -25,8 +25,10 @@ export default {
 
                 <!-- logo e titolo -->
                 <div class="d-flex align-items-center">
-                    <img src="../assets/imgs/logo-fitnes.png" alt="logo img">
-                    <h3 class="m-0">Avada Fitnes</h3>
+                    <a href="#0"><img src="../assets/imgs/logo-fitnes.png" alt="logo img"></a>
+                    <a href="#0">
+                        <h3 class="m-0">Avada Fitnes</h3>
+                    </a>
                 </div>
 
 
@@ -36,7 +38,8 @@ export default {
                         <li v-for="(item, i) in navItem" :key="`item${i}`">
                             <div :class="item.drop">
                                 <a href="#0" class="dropa">{{ item.label }}
-                                    <span v-if="item.label === 'Store'" class="badge text-bg-warning">New</span>
+                                    <span v-if="item.label === 'Store'"
+                                        class="badge text-bg-warning text-lowercase">New</span>
                                     <span v-if="item.children"><i class="fa-solid fa-chevron-down ms-2"></i></span>
                                 </a>
                                 <div v-if="item.label === 'Service'" class="dropdown-content">
@@ -65,7 +68,7 @@ export default {
 
                     <div><a href="#0"><i class="fa-solid fa-magnifying-glass mx-3"></i></a></div>
 
-                    <div><a href="#0"><i class="fa-solid fa-cart-shopping mx-3"></i></a></div>
+                    <div><a href="#0"><i class="fa-solid fa-cart-shopping mx-3 text-light"></i></a></div>
                 </div>
             </div>
         </div>
@@ -76,19 +79,25 @@ export default {
 @use "../style/partials/variables" as *;
 
 .container-fluid {
-    color: white;
-    background-color: $prymary-color;
+    color: $my-white-color;
+    background-color: $my-balck-color;
 
     .container {
         height: 100px;
 
+        a {
+            color: $my-white-color;
+            text-decoration: none;
+            padding: 40px 5px;
+            font-weight: bold;
+        }
+
         .navbar-container {
             height: 100%;
 
-            a {
-                color: white;
-                text-decoration: none;
-                padding: 40px 5px;
+            a,
+            div a {
+                color: $my-gray-color;
             }
 
             ul {
@@ -97,6 +106,19 @@ export default {
                 li {
                     margin: 0 5px;
 
+                    &:first-child a {
+                        color: $my-white-color;
+                    }
+
+                    a {
+                        color: $my-gray-color;
+
+                        &:hover {
+                            transition: 0.5s;
+                            color: $my-white-color;
+                        }
+                    }
+
                     .dropdown {
                         position: relative;
                         display: inline-block;
@@ -104,15 +126,18 @@ export default {
                         &:hover .dropdown-content {
                             opacity: 1;
                             transition: opacity 0.6s;
-
                         }
 
                         .dropa {
                             height: 100px;
-                            color: white;
-                            padding: 40px 16px;
+                            padding: 40px 10px;
                             font-size: 16px;
                             border: none;
+
+                            .badge {
+                                background-color: $my-yellow-color !important;
+                                border-radius: 2px;
+                            }
                         }
 
                         .dropdown-content {
@@ -120,7 +145,7 @@ export default {
                             transition: opacity 0.3s ease-in-out;
                             position: absolute;
                             top: 62px;
-                            background-color: $prymary-color;
+                            background-color: $my-balck-color;
                             min-width: 150px;
                             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                             z-index: 1;
@@ -131,12 +156,12 @@ export default {
                                 padding: 12px 16px;
                                 text-decoration: none;
                                 display: block;
-                                font-size: .8rem;
+                                font-size: .7rem;
 
                                 &:last-child {
                                     border-radius: 0 0 5px 5px;
                                 }
-                                
+
 
                                 &:hover {
                                     transition: 0.7s;
@@ -151,10 +176,20 @@ export default {
             .my-btn {
                 background-color: $my-blu-color;
                 font-size: .9rem;
+                font-weight: bold;
 
                 &:hover {
-                background-color: $my-red-color;
+                    transition: 0.5s;
+                    background-color: $my-red-color;
+                }
+            }
 
+            a {
+                color: $my-gray-color;
+
+                &:hover {
+                    transition: 0.5s;
+                    color: $my-white-color;
                 }
             }
         }
