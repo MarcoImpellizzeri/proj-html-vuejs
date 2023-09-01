@@ -1,53 +1,62 @@
 <script>
 
 export default {
-
+    data() {
+        return {
+            cardsData: [
+                {
+                    image: "../src/assets/imgs/service6-2x.jpg",
+                    title: "Crossfit workout",
+                    description: "Push your limits",
+                },
+                {
+                    image: "../src/assets/imgs/box1-2x.jpg",
+                    title: "Crossfit workout",
+                    description: "Push your limits",
+                },
+                {
+                    image: "../src/assets/imgs/box3-2x.jpg",
+                    title: "Crossfit workout",
+                    description: "Push your limits",
+                },
+            ],
+        };
+    },
 }
 </script>
 
 <template>
-    <div class="first-section-container container-fluid">
+    <div class="service-section-container container-fluid">
         <div class="container">
-            <div class="row row-cols-3">
-                <div class="col">
+            <div class="row row-cols-3 pb-5">
+                <div class="col" v-for="(card, i) in cardsData" :key="`card${i}`">
                     <div class="card text-bg-dark">
-                        <img src="../assets/imgs/service6-2x.jpg" class="card-img" alt="...">
+                        <img :src="card.image" class="card-img" alt="...">
                         <div class="card-img-overlay">
                             <div class="chevron my-2"><i class="fa-solid fa-chevron-up"></i>
                                 <i class="fa-solid fa-chevron-up my-margin"></i><i
                                     class="fa-solid fa-chevron-up my-margin"></i>
                             </div>
-                            <h3 class="card-title">Crossfit workout</h3>
-                            <h5 class="card-text">Push your limits</h5>
+                            <h3 class="card-title">{{ card.title }}</h3>
+                            <h5 class="card-text">{{ card.description }}</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card text-bg-dark">
-                        <img src="../assets/imgs/box1-2x.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="chevron my-2"><i class="fa-solid fa-chevron-up"></i>
-                                <i class="fa-solid fa-chevron-up my-margin"></i><i
-                                    class="fa-solid fa-chevron-up my-margin"></i>
-                            </div>
-                            <h3 class="card-title">Crossfit workout</h3>
-                            <h5 class="card-text">Push your limits</h5>
-                        </div>
+                <div class="text-container d-flex flex-column align-items-center justify-content-center pt-5 mt-5">
+                    <h2>
+                        “How you respond to the challenge
+                        in the second half will determine what you become after the game,
+                        whether you are a winner or a loser.”
+                    </h2>
+
+                    <div class="chevron mt-2"><i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-up my-margin"></i><i class="fa-solid fa-chevron-up my-margin"></i>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card text-bg-dark">
-                        <img src="../assets/imgs/box3-2x.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="position-a">
-                                <div class="chevron my-2"><i class="fa-solid fa-chevron-up"></i>
-                                    <i class="fa-solid fa-chevron-up my-margin"></i><i
-                                        class="fa-solid fa-chevron-up my-margin"></i>
-                                </div>
-                                <h3 class="card-title">Crossfit workout</h3>
-                                <h5 class="card-text">Push your limits</h5>
-                            </div>
-                        </div>
+
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="../assets/imgs/avatar-1-2x.jpg" alt="img avatar">
+                        <h5>Brad Johnson</h5>
+                        <h5>Las Vegas</h5>
                     </div>
                 </div>
             </div>
@@ -58,10 +67,10 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 
-.first-section-container {
+.service-section-container {
     background: rgb(26, 20, 195);
     background: linear-gradient(140deg, rgba(26, 20, 195, 1) 20%, rgba(186, 4, 43, 1) 80%);
-    height: 900px;
+    padding-bottom: 160px;
 
     .col {
         z-index: 3;
@@ -82,7 +91,7 @@ export default {
 
             &:hover {
                 /* Effetto di ingrandimento */
-                transform: scale(1.06);
+                transform: scale(1.05);
                 transition: transform 0.6s, box-shadow 0.3s;
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
             }
@@ -111,16 +120,53 @@ export default {
                 flex-direction: column;
                 z-index: 2;
 
-                .position-a {
-                    .chevron {
-                        .my-margin {
-                            margin-left: -3px;
-                        }
-                    }
 
-                    h5 {
-                        color: $my-yellow-color;
+                .chevron {
+                    .my-margin {
+                        margin-left: -3px;
                     }
+                }
+
+                h5 {
+                    color: $my-yellow-color;
+                }
+            }
+        }
+    }
+
+    .text-container {
+        padding: 48px 130px;
+        width: 100%;
+
+        h2 {
+            color: $my-white-color;
+            font-size: 2.6rem;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .chevron {
+            font-size: 1.7rem;
+            color: $my-yellow-color;
+
+            .my-margin {
+                margin-left: -6px;
+            }
+        }
+
+        div {
+            img {
+                width: 60px;
+                margin-right: 20px;
+            }
+
+            h5 {
+                color: $my-white-color;
+                margin-right: 20px;
+
+
+                &:last-child {
+                    color: $my-gray-color;
                 }
             }
         }
