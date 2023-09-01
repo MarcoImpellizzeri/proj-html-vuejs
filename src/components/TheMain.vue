@@ -2,12 +2,14 @@
 import ServiceSection from "./ServiceSection.vue"
 import SocialSection from "./SocialSection.vue"
 import MailingSection from "./MailingSection.vue";
+import BlueCrdsSection from "./BlueCrdsSection.vue";
 
 export default {
     components: {
         ServiceSection,
         SocialSection,
         MailingSection,
+        BlueCrdsSection,
     }
 }
 </script>
@@ -18,6 +20,7 @@ export default {
     </div>
     <SocialSection />
     <MailingSection />
+    <BlueCrdsSection />
 </template>
 
 <style lang="scss" scoped>

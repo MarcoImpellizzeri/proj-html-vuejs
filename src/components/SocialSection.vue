@@ -5,7 +5,7 @@ export default {
             cardsVideos: [
                 {
                     image: "../src/assets/imgs/video2-2x.jpg",
-                    title: " Thighs & glute workout",
+                    title: "Thighs & glute workout",
                     text: "Increase your mobility",
                 },
                 {
