@@ -1,9 +1,11 @@
 <script>
 import ServiceSection from "./ServiceSction.vue"
+import SocialSection from "./SocialSection.vue"
 
 export default {
     components: {
-        ServiceSection
+        ServiceSection,
+        SocialSection,
     }
 }
 </script>
@@ -11,6 +13,9 @@ export default {
 <template>
     <div class="service-section-container container-fluid">
         <ServiceSection />
+    </div>
+    <div class="social-section-container container-fluid">
+        <SocialSection />
     </div>
 </template>
 

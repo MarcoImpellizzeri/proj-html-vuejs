@@ -27,7 +27,7 @@ export default {
 
 <template>
     <div class="container">
-        <div class="row row-cols-3 pb-5">
+        <div class="row row-cols-3 pb-3">
             <div class="col" v-for="(card, i) in cardsData" :key="`card${i}`">
                 <div class="card text-bg-dark">
                     <img :src="card.image" class="card-img" alt="...">
@@ -40,22 +40,23 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="text-container d-flex flex-column align-items-center justify-content-center pt-5 mt-5">
-                <h2>
-                    “How you respond to the challenge
-                    in the second half will determine what you become after the game,
-                    whether you are a winner or a loser.”
-                </h2>
+        </div>
 
-                <div class="chevron mt-2"><i class="fa-solid fa-chevron-up"></i>
-                    <i class="fa-solid fa-chevron-up my-margin"></i><i class="fa-solid fa-chevron-up my-margin"></i>
-                </div>
+        <div class="text-container d-flex flex-column align-items-center justify-content-center pt-5 mt-5">
+            <h2>
+                “How you respond to the challenge
+                in the second half will determine what you become after the game,
+                whether you are a winner or a loser.”
+            </h2>
 
-                <div class="d-flex align-items-center">
-                    <img class="rounded-circle" src="../assets/imgs/avatar-1-2x.jpg" alt="img avatar">
-                    <h5>Brad Johnson</h5>
-                    <h5>Las Vegas</h5>
-                </div>
+            <div class="chevron mt-2"><i class="fa-solid fa-chevron-up"></i>
+                <i class="fa-solid fa-chevron-up my-margin"></i><i class="fa-solid fa-chevron-up my-margin"></i>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <img class="rounded-circle" src="../assets/imgs/avatar-1-2x.jpg" alt="img avatar">
+                <h5>Brad Johnson</h5>
+                <h5>Las Vegas</h5>
             </div>
         </div>
     </div>
@@ -63,6 +64,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
+
 .col {
     z-index: 3;
     margin-top: -80px;

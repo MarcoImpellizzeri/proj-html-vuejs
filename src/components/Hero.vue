@@ -121,9 +121,10 @@ export default {
                 padding: 35px 40px;
                 background-color: $my-white-color;
                 font-size: 1.1rem;
+                transition: 0.3s;
 
                 &:hover {
-                    transition: 0.5s;
+                    transition: 0.3s;
                     color: $my-red-color;
                 }
             }
