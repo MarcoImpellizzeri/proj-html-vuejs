@@ -74,6 +74,7 @@ export default {
                 justify-content: center;
                 align-items: center;
                 transition: transform 0.3s ease-in-out;
+                border-radius: 10px;
 
                 &:hover {
                     transform: scale(1.05);
