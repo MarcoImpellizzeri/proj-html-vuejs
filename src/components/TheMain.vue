@@ -6,6 +6,7 @@ import BlueCardsSection from "./BlueCardsSection.vue";
 import ArticlesSectionVue from "./ArticlesSection.vue";
 import BuySection from './BuySection.vue'
 import SponsorSection from './SponsorSection.vue'
+import WorkoutSection from "./WorkoutSection.vue";
 
 export default {
     components: {
@@ -16,6 +17,7 @@ export default {
         ArticlesSectionVue,
         BuySection,
         SponsorSection,
+        WorkoutSection,
     }
 }
 </script>
@@ -30,6 +32,7 @@ export default {
     <ArticlesSectionVue />
     <BuySection />
     <SponsorSection />
+    <WorkoutSection />
 </template>
 
 <style lang="scss" scoped>
