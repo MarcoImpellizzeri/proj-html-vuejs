@@ -34,8 +34,8 @@ export default {
                         <img :src="card.image" class="card-img-top" alt="img not foud">
                         <div class="overlay"></div>
                     </a>
-                    <div class="card-body text-center">
-                        <h4 class="card-title"><a href="#0">{{ card.title }}</a></h4>
+                    <div class="card-body">
+                        <h4 class="card-title pt-3"><a href="#0">{{ card.title }}</a></h4>
                         <p class="card-text">By <a href="#0">admin</a> |November 26th, 2019| <a href="#0">Gym</a></p>
                     </div>
                 </div>
