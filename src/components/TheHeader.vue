@@ -3,12 +3,36 @@ export default {
     data() {
         return {
             navItem: [
-                { label: 'Home' },
-                { label: 'Service', children: true, drop: 'dropdown' },
-                { label: 'About', children: true, drop: 'dropdown' },
-                { label: 'Videos', children: true, drop: 'dropdown' },
-                { label: 'Blog' },
-                { label: 'Store', children: true, drop: 'dropdown' }
+                {
+                    label: 'Home'
+                },
+                {
+                    label: 'Service',
+                    children: true,
+                    drop: 'dropdown',
+                    dropContent: [ 'All Service','Service Single Page' ]
+                },
+                {
+                    label: 'About',
+                    children: true,
+                    drop: 'dropdown',
+                    dropContent: [ "About me", "Our Sponsor", "Contact"]
+                },
+                {
+                    label: 'Videos',
+                    children: true,
+                    drop: 'dropdown',
+                    dropContent: [ 'All Playlis', 'Playlist Page', 'Video Single Page' ]
+                },
+                {
+                    label: 'Blog'
+                },
+                {
+                    label: 'Store',
+                    children: true,
+                    drop: 'dropdown',
+                    dropContent: [ 'Simple Product', 'Variable Product' ]
+                }
             ],
         }
     },
@@ -39,23 +63,9 @@ export default {
                                         class="badge text-bg-warning text-lowercase">New</span>
                                     <span v-if="item.children"><i class="fa-solid fa-chevron-down ms-2"></i></span>
                                 </a>
-                                <div v-if="item.label === 'Service'" class="dropdown-content">
-                                    <a href="#0">All Service</a>
-                                    <a href="#0">Service Single Page</a>
-                                </div>
-                                <div v-if="item.label === 'About'" class="dropdown-content">
-                                    <a href="#0">About me</a>
-                                    <a href="#0">Our Sponsor</a>
-                                    <a href="#0">Contact</a>
-                                </div>
-                                <div v-if="item.label === 'Videos'" class="dropdown-content">
-                                    <a href="#0">All Playlist</a>
-                                    <a href="#0">Playlist Page</a>
-                                    <a href="#0">Video Single Page</a>
-                                </div>
-                                <div v-if="item.label === 'Store'" class="dropdown-content">
-                                    <a href="#0">Simple Product</a>
-                                    <a href="#0">Variable Product</a>
+                                <div class="dropdown-content">
+                                    <a v-for="(dropItem, i) in item.dropContent" :key="`dropItem${i}`" href="#0">
+                                    {{ dropItem }}</a>
                                 </div>
                             </div>
                         </li>
