@@ -6,6 +6,14 @@ export default {
 
 <template>
     <div class="container-fluid">
+        <a href="#0" class="square top">
+            <i class="fa-solid fa-folder"></i>
+            <p>Prebuilds</p>
+        </a>
+        <a href="#0" class="square bot">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Buy Now</p>
+        </a>
         <div class="container d-flex">
             <div class="container-70 py-5">
                 <h3 class="my-3">Join our mailing list today</h3>
@@ -103,5 +111,9 @@ export default {
             }
         }
     }
+}
+
+.square {
+    z-index: 9999;
 }
 </style>

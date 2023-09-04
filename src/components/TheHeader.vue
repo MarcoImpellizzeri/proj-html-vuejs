@@ -47,7 +47,7 @@ export default {
         <div class="container-fluid">
             <div class="container d-flex justify-content-between align-items-center">
 
-                <!-- logo e titolo -->
+                <!-- logo -->
                 <div class="d-flex align-items-center">
                     <a href="#0"><img src="../assets/imgs/logo.png" alt="logo img"></a>
                 </div>

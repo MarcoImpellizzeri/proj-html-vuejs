@@ -7,6 +7,15 @@ export default {
 
 <template>
     <div class="container-fluid">
+        <a href="#0" class="square top">
+            <i class="fa-solid fa-folder"></i>
+            <p>Prebuilds</p>
+        </a>
+        <a href="#0" class="square bot">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Buy Now</p>
+        </a>
+
         <div class="container d-flex">
             <div class="c-buy py-5">
                 <h2 class="my-2">“I’ve failed over and over again in my life. And that is why I succeed.”</h2>
@@ -27,12 +36,16 @@ export default {
 @use "../style/partials/variables" as *;
 
 .container-fluid {
+
+    .square {
+        z-index: 9999;
+    }
+
     background-image: url(../assets/imgs/banner2-2x.jpg);
     background-size: 1950px;
     background-position: top right;
     background-repeat: no-repeat;
     height: 700px;
-    z-index: 1;
     position: relative;
 
     &::before {
@@ -44,7 +57,6 @@ export default {
         height: 100%;
         background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.856) 0%, rgba(241, 255, 0, 0) 100%);
-        z-index: 2;
     }
 
     .container {

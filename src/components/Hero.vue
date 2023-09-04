@@ -7,6 +7,14 @@ export default {
 
 <template>
     <div class="container-fluid">
+        <a href="#0" class="square top">
+            <i class="fa-solid fa-folder"></i>
+            <p>Prebuilds</p>
+        </a>
+        <a href="#0" class="square bot">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Buy Now</p>
+        </a>
         <div class="container d-flex">
             <div class="c-left py-5">
                 <h3 class="my-2">Certified fitness professional</h3>
@@ -53,6 +61,7 @@ export default {
 
     .container {
         justify-content: space-between;
+
         .c-left {
             z-index: 3;
             height: 700px;
@@ -115,6 +124,7 @@ export default {
             justify-content: center;
             align-items: center;
             width: 30%;
+
             .btn-play {
                 border: 0;
                 color: $my-blu-color;
@@ -131,5 +141,9 @@ export default {
         }
 
     }
+}
+
+.square {
+    z-index: 9999;
 }
 </style>
