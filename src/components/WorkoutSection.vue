@@ -86,52 +86,7 @@ export default {
                 color: $my-white-color;
                 text-decoration: none;
             }
-            .chevron {
-                font-size: 1.7rem;
-                color: $my-yellow-color;
-
-                .my-margin {
-                    margin-left: -6px;
-                }
-            }
-
-            .my-btn {
-                background-color: $my-blu-color;
-                font-size: 1rem;
-                padding: 16px 40px;
-
-                &:hover {
-                    transition: 0.5s;
-                    background-color: $my-red-color;
-                }
-            }
-
-            .my-btn:last-child {
-                background-color: $my-black-color;
-                border: 1px solid $my-gray-color;
-                color: $my-gray-color;
-
-                &:hover {
-                    transition: 0.5s;
-                    background-color: $my-white-color;
-                    color: $my-black-color;
-                    border: 1px solid $my-white-color;
-                }
-            }
         }
-
-        .c-right {
-            z-index: 3;
-            height: 700px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 30%;
-
-
-        }
-
     }
 }
 </style>

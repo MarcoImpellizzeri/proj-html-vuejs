@@ -47,39 +47,44 @@ export default {
 </script>
 
 <template>
-    <div>
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row row-cols-3">
-                    <div class="col left-col">
-                        <img src="../assets/imgs/logo.png" alt="image not found">
-                        <p>Ac aliquam neque sagittis diam faucibus vitae purus turpis phasellus. Pellentesque consectetur
-                            amet purus ultrices mauris.</p>
-                        <ul class="social-list">
-                            <li v-for="(icon, i) in socialIcons" :key="`icon${i}`">
-                                <div class="badge my-badge">{{ icon.nameSocial }}</div>
-                                <a href="#0" v-html="icon.iconCode"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col mid-col">
-                        <h5 class="text-uppercase">Recent posts</h5>
-                        <ul>
-                            <li class="post-list" v-for="(post, i) in postsList" :key="`post${i}`">
-                                <a href="#0">
-                                    <i class="fa-solid fa-chevron-right"></i> {{ post.postTitle }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col right-col">
-                        <h5 class="text-uppercase">Contact informations</h5>
-                        <span>4746 Tipple Road Michigan 48449</span>
-                        <span>Mobile: 1.800.000.0000</span>
-                        <span>Email : info@your-company.com</span>
-                    </div>
+    <div class="container-fluid">
+        <div class="container footer-container">
+            <div class="row row-cols-3">
+                <div class="col left-col">
+                    <img src="../assets/imgs/logo.png" alt="image not found">
+                    <p>Ac aliquam neque sagittis diam faucibus vitae purus turpis phasellus. Pellentesque consectetur
+                        amet purus ultrices mauris.</p>
+                    <ul class="social-list">
+                        <li v-for="(icon, i) in socialIcons" :key="`icon${i}`">
+                            <div class="badge my-badge">{{ icon.nameSocial }}</div>
+                            <a href="#0" v-html="icon.iconCode"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mid-col">
+                    <h5 class="text-uppercase">Recent posts</h5>
+                    <ul>
+                        <li class="post-list" v-for="(post, i) in postsList" :key="`post${i}`">
+                            <a href="#0">
+                                <i class="fa-solid fa-chevron-right"></i> {{ post.postTitle }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col right-col">
+                    <h5 class="text-uppercase">Contact informations</h5>
+                    <span>4746 Tipple Road Michigan 48449</span>
+                    <span>Mobile: 1.800.000.0000</span>
+                    <span>Email : info@your-company.com</span>
                 </div>
             </div>
+        </div>
+
+        <hr>
+
+        <div class="container copyright">
+            <span>© Copyright 2012 - 2023 | Avada Theme by <a href="#0">ThemeFusion</a> | All Rights Reserved | Powered by
+                <a href="#0">WordPress</a></span>
         </div>
     </div>
 </template>
@@ -89,95 +94,122 @@ export default {
 
 .container-fluid {
     background-color: $my-black-color;
-    padding: 150px 0;
 
-    .left-col {
-        text-align: center;
+    .footer-container {
+        padding: 150px 0;
 
-        p {
-            padding: 20px;
-            margin: 0;
-            color: $my-white-color;
-        }
+        .row {
+            .left-col {
+                text-align: center;
 
-        .social-list {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
+                p {
+                    padding: 20px;
+                    margin: 0;
+                    color: $my-white-color;
+                }
 
-            li {
+                .social-list {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        margin-top: 15px;
+
+                        .my-badge {
+                            background-color: #35363A;
+                            font-size: .7rem;
+                            opacity: 0;
+                            transition: opacity 0.4s ease-in-out;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $my-red-color;
+                            transition: opacity 0.4s ease-in-out;
+                        }
+
+                        &:hover .my-badge {
+                            opacity: 1;
+                            transition: opacity 0.4s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .mid-col {
+                text-align: center;
+
+                h5 {
+                    margin-top: 5px;
+                    color: $my-white-color;
+                    margin-bottom: 50px;
+                }
+
+                .post-list {
+                    list-style: none;
+                    margin: 20px 0;
+                    text-align: center;
+
+                    a {
+                        text-decoration: none;
+                        color: $my-white-color;
+                        transition: 0.4s;
+                        font-size: 1.1rem;
+
+                        &:hover {
+                            color: $my-blu-color;
+                            transition: 0.4s;
+                        }
+                    }
+                }
+            }
+
+            .right-col {
+                color: $my-white-color;
+                text-align: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                margin-top: 15px;
 
-                .my-badge {
-                    background-color: #35363A;
-                    font-size: .7rem;
-                    opacity: 0;
-                    transition: opacity 0.4s ease-in-out;
+                h5 {
+                    margin-top: 5px;
+                    margin-bottom: 50px;
                 }
 
-                a {
-                    text-decoration: none;
-                    color: $my-red-color;
-                    transition: opacity 0.4s ease-in-out;
-                }
+                span {
+                    font-size: 1.1rem;
 
-                &:hover .my-badge {
-                    opacity: 1;
-                    transition: opacity 0.4s ease-in-out;
+                    &:nth-child(2) {
+                        color: $my-gray-color;
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
     }
 
-    .mid-col {
+    hr {
+        color: $my-gray-color;
+    }
+
+    .copyright {
+        padding: 47px 0;
+        background-color: $my-black-color;
+        color: $my-gray-color;
         text-align: center;
 
-        h5 {
-            margin-top: 5px;
+        a {
+            text-decoration: none;
             color: $my-white-color;
-            margin-bottom: 50px;
-        }
+            transition: 0.4s;
 
-        .post-list {
-            list-style: none;
-            margin: 20px 0;
-            text-align: center;
-
-            a {
-                text-decoration: none;
-                color: $my-white-color;
+            &:hover {
+                color: $my-blu-color;
                 transition: 0.4s;
-                font-size: 1.1rem;
-
-                &:hover {
-                    color: $my-blu-color;
-                    transition: 0.4s;
-                }
-            }
-        }
-    }
-
-    .right-col {
-        color: $my-white-color;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-
-        h5 {
-            margin-top: 5px;
-            margin-bottom: 50px;
-        }
-
-        span {
-            font-size: 1.1rem;
-
-            &:nth-child(2) {
-                color: $my-gray-color;
-                margin-bottom: 20px;
             }
         }
     }

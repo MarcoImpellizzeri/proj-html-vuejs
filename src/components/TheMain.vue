@@ -23,9 +23,7 @@ export default {
 </script>
 
 <template>
-    <div class="service-section-container container-fluid">
-        <ServiceSection />
-    </div>
+    <ServiceSection />
     <SocialSection />
     <MailingSection />
     <BlueCardsSection />
@@ -38,9 +36,4 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 
-.service-section-container {
-    background: rgb(26, 20, 195);
-    background: linear-gradient(140deg, rgba(26, 20, 195, 1) 20%, rgba(186, 4, 43, 1) 80%);
-    padding-bottom: 160px;
-}
 </style>
